@@ -5,7 +5,7 @@ pipeline {
             agent {
                 dockerfile {
                   label params.AGENT_LABEL  // both label and image
-                  dir '.'
+                  dir params.DOCKER_DIR
                 }
             }
             steps {
@@ -18,7 +18,7 @@ pipeline {
             agent {
               dockerfile {
                 label params.AGENT_LABEL  // both label and image
-                dir '.' 
+                dir params.DOCKER_DIR
               }
             }
             steps {
